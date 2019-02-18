@@ -1,0 +1,10 @@
+import Req from '@/libs/req'
+import TokenStorage from '@/libs/auth/token-storage'
+
+const serverUrl = 'http://127.0.0.1:8089'
+const wikiUrl = 'http://ru1.openlist.wiki/'
+const wikiApiUrl = 'http://ru1.openlist.wiki/api.php'
+
+const req = new Req(serverUrl, TokenStorage.get())
+
+export default { req, wikiUrl, wikiApiUrl, serverUrl }
