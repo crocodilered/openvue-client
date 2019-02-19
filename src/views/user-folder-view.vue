@@ -123,7 +123,7 @@
     computed: {
       photos: function () {
         if (this.folder && this.folder.photos) {
-          return this.folder.photos.map(photo => `http://127.0.0.1:8089/folder/photo?f=${this.folder.title}&n=${photo}`)
+          return this.folder.photos.map(photo => `${conf.serverUrl}/folder/photo?f=${this.folder.title}&n=${photo}`)
         }
         return null
       }
@@ -137,7 +137,7 @@
       async doneDialogLoadingClick () {
         this.folder.status = 2 // STATUS_REVIEW
         this.doneDialogLoading = true
-        let resp = await conf.req.post('/folder/update/', { folder: this.folder })
+        await conf.req.post('/folder/update/', { folder: this.folder })
         // TODO: deal with errors
         this.$router.push('/folder2')
       }
