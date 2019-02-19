@@ -120,9 +120,7 @@
       }
       // Load folders list
       resp = await conf.req.post('/folder/list_by_user/')
-      if (resp.errorCode === 0 && resp.data.length > 0 ) {
-        this.folders = resp.data
-      }
+      this.folders = resp.data
       this.loading = false
     }
   }
