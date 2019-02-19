@@ -97,7 +97,7 @@
         if (found) {
           const folder = found[0]
           folder.status = status
-          resp = await conf.req.post('/folder/update/', { folder })
+          const resp = await conf.req.post('/folder/update/', { folder })
           if (!resp.errorCode) {
             this.folders_ = this.folders_.filter(item => item.id !== folderId)
           }
