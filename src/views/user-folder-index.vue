@@ -2,8 +2,8 @@
   <v-container>
     <loading-indicator v-model="loading"></loading-indicator>
 
-    <v-layout v-if="!loading" wrap align-center>
-      <v-flex xs12 sm6 order-xs2>
+    <v-layout v-if="!loading" wrap>
+      <v-flex xs12 sm6 order-xs2 align-self-center  class="text-md-center">
         <v-btn
           color="primary"
           depressed
@@ -12,7 +12,8 @@
         >Взять дело для расшифровки</v-btn>
       </v-flex>
       <v-flex xs12 sm6 order-xs1>
-        <p><big>Дел в очереди: {{ availableFoldersCount }}</big></p>
+        <p>Для начала работы выберите дело для расшифровки из списка ниже или нажмите на кнопку «Взять дело для расшифровки».</p>
+        <p>Дел в очереди: {{ availableFoldersCount }}</p>
       </v-flex>
     </v-layout>
 

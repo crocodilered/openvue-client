@@ -88,10 +88,6 @@
     <v-content>
       <router-view/>
     </v-content>
-
-    <footer>
-      <code>isAuthenticated: {{ isAuthenticated }}</code>
-    </footer>
   </v-app>
 </template>
 

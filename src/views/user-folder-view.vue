@@ -15,6 +15,13 @@
     >
       <v-flex xs12>
         <h1>{{ folder.title }}</h1>
+
+        <p>
+          <a href="https://docs.google.com/document/d/140WmQYGaQQedXT80ieJgZpSQiBqsYl-fiBVeUshl_HY/edit">
+            Инструкция по вводу анкет
+          </a>
+        </p>
+
       </v-flex>
       <v-flex xs12>
         <v-btn
