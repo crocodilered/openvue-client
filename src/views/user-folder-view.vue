@@ -16,33 +16,60 @@
       <v-flex xs12>
         <h1>{{ folder.title }}</h1>
 
-        <p>
-          <a href="https://docs.google.com/document/d/140WmQYGaQQedXT80ieJgZpSQiBqsYl-fiBVeUshl_HY/edit">
-            Инструкция по вводу анкет
-          </a>
-        </p>
+        
 
       </v-flex>
       <v-flex xs12>
-        <v-btn
-          depressed
-          outline
-          color="secondary"
-          :to="`/folder2/${folder.id}/formular/`"
-        >
-          <v-icon>add</v-icon>
-          Создать формуляр
-        </v-btn>
-        <v-btn
-          v-if="folder.formulars"
-          depressed
-          outline
-          color="secondary"
-          @click="doneDialogShow = true"
-        >
-          <v-icon>done_all</v-icon>
-          Отправить на проверку
-        </v-btn>
+        <v-layout wrap>
+          <v-flex
+            xs12
+            sm4
+            align-self-center
+            order-xs2
+            order-sm1
+          >
+            <v-btn
+              depressed
+              outline
+              color="secondary"
+              :to="`/folder2/${folder.id}/formular/`"
+            >
+              <v-icon>add</v-icon>
+              Создать формуляр
+            </v-btn>
+            <v-btn
+              v-if="folder.formulars"
+              depressed
+              outline
+              color="secondary"
+              @click="doneDialogShow = true"
+            >
+              <v-icon>done_all</v-icon>
+              Отправить на проверку
+            </v-btn>
+          </v-flex>
+          <v-flex
+            xs12
+            sm8
+            order-xs1
+            order-sm2
+          >
+            <v-alert
+              :value="true"
+              color="info"
+            >
+              <p>
+                <big><a
+                  href="https://docs.google.com/document/d/140WmQYGaQQedXT80ieJgZpSQiBqsYl-fiBVeUshl_HY"
+                  style="color: white;"
+                >
+                  Инструкция по вводу анкет
+                </a></big>
+              </p>
+              <p>По окончании работы запишите страницу и нажмите на кнопку «Отправить на проверку».</p>
+            </v-alert>
+          </v-flex>
+        </v-layout>
       </v-flex>
       <v-flex xs12>
         <h2>Созданные формуляры</h2>
